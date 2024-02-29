@@ -18,6 +18,10 @@ Essa aplicação foi desenvolvida utilizando React, JavaScript e CSS
     http://localhost:5173/ 
 
 
+## Execute a API 
+
+    npm run backend
+
  ## Documentações das Ferramentas:
 
 - [vite](https://vitejs.dev/)
