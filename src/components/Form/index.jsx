@@ -3,7 +3,17 @@ import styles from './Form.module.css'
 import FormLogo from '../../assets/form-logo.png'
 
 import { useForm } from 'react-hook-form'
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from "yup"
 
+const schema = yup
+  .object({
+    name: yup.string().required(),
+    email: yup.string().email().required(),
+    password: yup.string().min(6).required(),
+    confirPassword: yup.string().required().oneOf([yup.ref('password')]),
+  })
+  .required()
 
 export default function Form() {
 

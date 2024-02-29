@@ -36,6 +36,7 @@ Essa aplicação foi desenvolvida utilizando React, JavaScript e CSS
 1. Instalar o React Hook Forms
 1. Criar o Formulario com o React Hook Forms
 1. Instalar o Hook Form / Resolvers Yup
+1. Criar o Schema (validation)
 1. Instalar o Servidor JSON SERVER
 1. Criar a API
 1. Criar o Arquivo db.json
