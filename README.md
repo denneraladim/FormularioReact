@@ -26,6 +26,7 @@ Essa aplicação foi desenvolvida utilizando React, JavaScript e CSS
 # Funcionalidades 
 1. Criar a Pasta Componente
 1. Criar o arquivo do Formulario e o CSS
+1. Criar o Gerenciador de Estado (UseState)
 
 # Projeto em Andamento
 
