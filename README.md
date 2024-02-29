@@ -23,6 +23,10 @@ Essa aplicação foi desenvolvida utilizando React, JavaScript e CSS
 - [vite](https://vitejs.dev/)
 - [React](https://react.dev/)
 
+# Funcionalidades 
+1. Criar a Pasta Componente
+1. Criar o arquivo do Formulario e o CSS
+
 # Projeto em Andamento
 
 
