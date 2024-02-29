@@ -33,11 +33,11 @@ Essa aplicação foi desenvolvida utilizando React, JavaScript e CSS
 # Funcionalidades 
 1. Criar a Pasta Componente
 1. Criar o arquivo do Formulario e o CSS
-1. Criar o Gerenciador de Estado (UseState)
 1. Instalar o Servidor JSON SERVER
 1. Criar a API
 1. Criar o Arquivo db.json
 1. Criar o Script responsável da API do backend
+
 
 # Projeto em Andamento
 
