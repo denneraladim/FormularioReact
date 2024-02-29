@@ -8,10 +8,10 @@ import * as yup from "yup"
 
 const schema = yup
   .object({
-    name: yup.string().required(),
-    email: yup.string().email().required(),
-    password: yup.string().min(6).required(),
-    confirPassword: yup.string().required().oneOf([yup.ref('password')]),
+    name: yup.string().required('O nome é obrigatório'),
+    email: yup.string().email('Digite um email válido').required('O email é obrigatório'),
+    password: yup.string().min(6,'A senha deve ter pelo menos 6 digitos').required('A senha é obrigatória'),
+    confirPassword: yup.string().required('Confirma a senha é obrigatória').oneOf([yup.ref('password')],'As senhas devem ser iguais'),
   })
   .required()
 
@@ -19,9 +19,8 @@ export default function Form() {
 
   const {
     register,
-     handleSubmit, 
-     watch,
-     formState: { errors },
+    handleSubmit, 
+    formState: { errors },
     } =
      useForm({
       resolver: yupResolver(schema),
@@ -30,63 +29,33 @@ export default function Form() {
   function onSubmit(userData){
     console.log(userData)
   }
-  console.log(errors)
+  
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <img src={FormLogo} alt="imagem-logo" className={styles.img}/>
       <label>
         Nome
-        <input {...register("name",{ required: true })} />
-        {errors.name && <span>O nome é obrigatório</span>}
+        <input type='text' {...register("name",{ required: true })} />
+        <span>{errors.name?.message}</span> 
       </label>
       <label>
         E-mail
-        <input {...register("email",{ required: true })} />
+        <input type='text' {...register("email",{ required: true })} />
+        <span>{errors.email?.message}</span> 
       </label>
       <label>
         Senha
-        <input {...register("password",{ required: true })} />
+        <input type='password'{...register("password",{ required: true })} />
+        <span>{errors.password?.message}</span> 
       </label>
       <label>
         Confirmar senha
-        <input {...register("confirmPassword",{ required: true })} />
+        <input type='password' {...register("confirmPassword",{ required: true })} />
+        <span>{errors.confirPassword?.message}</span> 
       </label>
       <button>Cadastrar-se</button>
     </form>
   )
-
-    // const [name, setName] = useState('')
-    // const [email, setEmail] = useState('')
-   
-    
-        
-
-    // const handleSignupForm = (event) => {
-    //     event.preventDefault()
-    //     console.log({ name, email})
-    //   }
-    // return (
-
-    //     <div className={styles.container}>
-    //     <form className={styles.form} onSubmit={handleSignupForm}>
-    //       <h1>Formulário de cadastro</h1>
-    //       <input
-    //        type='text'
-    //        placeholder='Nome completo'
-    //        required
-    //        value={name}
-    //        onChange={(event) => setName(event.target.value) }
-    //       />
-    //       <input
-    //        type='email'
-    //        placeholder='E-mail'
-    //        required
-    //        value={email}
-    //        onChange={(event) => setEmail(event.target.value) }
-    //       />
-    //      <button type='submit'>Enviar</button>
-    //     </form>
-    //    </div>
-    // )
 }
+
