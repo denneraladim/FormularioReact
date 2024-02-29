@@ -17,7 +17,15 @@ const schema = yup
 
 export default function Form() {
 
-  const {register, handleSubmit, watch,formState: { errors },} = useForm()
+  const {
+    register,
+     handleSubmit, 
+     watch,
+     formState: { errors },
+    } =
+     useForm({
+      resolver: yupResolver(schema),
+     })
 
   function onSubmit(userData){
     console.log(userData)
