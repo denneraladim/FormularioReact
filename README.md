@@ -22,6 +22,9 @@ Essa aplicação foi desenvolvida utilizando React, JavaScript e CSS
 
     npm run backend
 
+## A Aplicação será iniciada na porta  5000, acesse pelo navegador:
+       http://localhost:5000/cadastros
+
  ## Documentações das Ferramentas:
 
 - [vite](https://vitejs.dev/)
