@@ -6,8 +6,7 @@ export default function Form() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const {telephone, setTelephone} = useState('')
-    const {date, setDate} = useState('')
-
+    
 
     const handleSignupForm = (event) => {
         event.preventDefault()
