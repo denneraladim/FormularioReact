@@ -5,7 +5,6 @@ export default function Form() {
   return (
     <form>
       <img src={FormLogo} alt="imagem-logo" />
-      <h1>Formulário de cadastro</h1>
       <label>
         <input type="text" placeholder='Nome Completo' />
       </label>
