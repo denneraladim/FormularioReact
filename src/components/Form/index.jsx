@@ -5,11 +5,13 @@ export default function Form() {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const {password, setPassword} = useState('')
+    const {telephone, setTelephone} = useState('')
+    const {date, setDate} = useState('')
+
 
     const handleSignupForm = (event) => {
         event.preventDefault()
-        console.log({ name, email, password})
+        console.log({ name, email, telephone})
       }
     return (
 
@@ -30,14 +32,14 @@ export default function Form() {
            value={email}
            onChange={(event) => setEmail(event.target.value) }
           />
-          <input 
-          type='password'
-          placeholder='Senha'
-          required
-          value={password}
-          onChange={(event) => setPassword(event.target.value) }
-         />
-          <button type='submit'>Enviar</button>
+         <input 
+         type='tel'
+         placeholder='telefone'
+         required
+         value={telephone}
+         onChange={(event) => setTelephone(event.target.value) } 
+        />
+        <button type='submit'>Enviar</button>
         </form>
        </div>
     )
