@@ -33,6 +33,7 @@ Essa aplicação foi desenvolvida utilizando React, JavaScript e CSS
 # Funcionalidades 
 1. Criar a Pasta Componente
 1. Criar o arquivo do Formulario e o CSS
+1. Instalar o React Hook Forms
 1. Instalar o Servidor JSON SERVER
 1. Criar a API
 1. Criar o Arquivo db.json
