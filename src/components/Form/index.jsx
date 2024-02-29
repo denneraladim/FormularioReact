@@ -1,27 +1,40 @@
-// import { useState } from 'react'
 import styles from './Form.module.css'
+
 import FormLogo from '../../assets/form-logo.png'
+
+import { useForm } from 'react-hook-form'
+
+
 export default function Form() {
+
+  const {register, handleSubmit, watch,formState: { errors },} = useForm()
+
+  function onSubmit(userData){
+    console.log(userData)
+  }
+  console.log(errors)
+
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <img src={FormLogo} alt="imagem-logo" className={styles.img}/>
       <label>
         Nome
-        <input type="text" placeholder='Nome Completo' />
+        <input {...register("name",{ required: true })} />
+        {errors.name && <span>O nome é obrigatório</span>}
       </label>
       <label>
         E-mail
-        <input type="text" placeholder='E-mail' />
+        <input {...register("email",{ required: true })} />
       </label>
       <label>
         Senha
-        <input type="text" placeholder='Senha' />
+        <input {...register("password",{ required: true })} />
       </label>
       <label>
         Confirmar senha
-        <input type="text" placeholder='Confirmar senha' />
+        <input {...register("confirmPassword",{ required: true })} />
       </label>
-      <button>Enviar</button>
+      <button>Cadastrar-se</button>
     </form>
   )
 
