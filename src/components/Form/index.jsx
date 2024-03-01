@@ -1,5 +1,4 @@
 import styles from './Form.module.css'
-
 import FormLogo from '../../assets/form-logo.png'
 
 import { useForm } from 'react-hook-form'
@@ -40,10 +39,7 @@ export default function Form() {
     reset()
   }
   
-  
-  
-
-  return (
+return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
       <img src={FormLogo} alt="imagem-logo" className={styles.img}/>
       <label>
