@@ -29,6 +29,7 @@ Essa aplicação foi desenvolvida utilizando React, JavaScript,CSS, React Hook F
 
 - [vite](https://vitejs.dev/)
 - [React](https://react.dev/)
+- [React Hook Form](https://react-hook-form.com)
 
 # Funcionalidades 
 1. Criar a Pasta Componente
