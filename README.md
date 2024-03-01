@@ -41,6 +41,7 @@ Essa aplicação foi desenvolvida utilizando React, JavaScript e CSS
 1. Criar a API
 1. Criar o Arquivo db.json
 1. Criar o Script responsável da API do backend
+1. Criar a requisição com Fetch
 
 
 # Projeto em Andamento
