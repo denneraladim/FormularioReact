@@ -1,6 +1,6 @@
 # Formulário (REACT)
 
-Essa aplicação foi desenvolvida utilizando React, JavaScript e CSS
+Essa aplicação foi desenvolvida utilizando React, JavaScript,CSS, React Hook Form,API JSON SERVER E Requisição Fetch.
 
 # Como rodar este projeto?
       git clone FormularioReact
