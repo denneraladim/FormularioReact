@@ -11,24 +11,36 @@ const schema = yup
     name: yup.string().required('O nome é obrigatório'),
     email: yup.string().email('Digite um email válido').required('O email é obrigatório'),
     password: yup.string().min(6,'A senha deve ter pelo menos 6 digitos').required('A senha é obrigatória'),
-    confirPassword: yup.string().required('Confirma a senha é obrigatória').oneOf([yup.ref('password')],'As senhas devem ser iguais'),
-  })
-  .required()
+    confirmPassword: yup.string().required('confirmar senha é obrigatória').oneOf([yup.ref('password')],'As senhas devem ser iguais'),
+  }).required();
 
 export default function Form() {
 
   const {
     register,
-    handleSubmit, 
+    handleSubmit,
+    reset, 
     formState: { errors },
     } =
      useForm({
       resolver: yupResolver(schema),
      })
 
-  function onSubmit(userData){
-    console.log(userData)
+  async function onSubmit({name, email, password, confirmPassword}){
+    await fetch('http://localhost:5000/cadastros', {
+      method: 'POST',
+      body: JSON.stringify({
+        name,
+        email,
+        password,
+        confirmPassword
+      })
+    })
+
+    reset()
   }
+  
+  
   
 
   return (
@@ -52,7 +64,7 @@ export default function Form() {
       <label>
         Confirmar senha
         <input type='password' {...register("confirmPassword",{ required: true })} />
-        <span>{errors.confirPassword?.message}</span> 
+        <span>{errors.confirmPassword?.message}</span> 
       </label>
       <button>Cadastrar-se</button>
     </form>
