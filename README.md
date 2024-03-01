@@ -45,7 +45,7 @@ Essa aplicação foi desenvolvida utilizando React, JavaScript,CSS, React Hook F
 1. Criar a requisição com Fetch
 
 # URL DO PROJETO
-    https://formulario-react-ochre.vercel.app
+  https://formulario-react-ochre.vercel.app
 
 # Projeto Concluido
 
